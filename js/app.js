@@ -59,7 +59,7 @@ sliderBtnRight.addEventListener('click', function (){
  if(imageIndex === imageArr.length - 1){
      imageIndex = 0
  }else {
-     imageIndex++;
+     imageIndex+=1;
  }
     screenSize()
     discover.classList.add('animation');
