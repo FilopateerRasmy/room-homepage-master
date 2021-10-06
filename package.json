@@ -1,0 +1,15 @@
+{
+  "name": "room-homepage-master",
+  "version": "1.0.0",
+  "description": "![Design preview for the Room homepage coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "watch": "node-sass -o css scss/main.scss -w"
+  },
+  "author": "",
+  "license": "ISC"
+}

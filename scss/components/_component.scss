@@ -1,0 +1,259 @@
+.logo{
+  grid-column: 1/2;
+  margin: auto;
+  @media (max-width: 1025px) {
+    position: fixed;
+    top: 4rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .3s .3s;
+    font-size: 3rem;
+  }
+  @media (max-width: 541px) {
+    font-size: 2rem;
+  }
+
+}
+.navbar{
+  padding: 4rem 0;
+  grid-column: 2/4;
+
+  @media (max-width: 1025px) {
+    margin-left: 0;
+    position: fixed;
+    top: -3rem;
+    left: 50%;
+    width: 50vw;
+    transform: translate(-50%,-50%);
+    transition: all .5s .4s;
+  }
+}
+.nav{
+  &-list{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    font-size: 1.2rem;
+  }
+  &-link{
+    color: color(White);
+    text-decoration: none;
+    text-transform: capitalize;
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      bottom: -.5rem;
+      width: 0;
+      background-color: white;
+      height: .2rem;
+      left: 0;
+      transition: all .3s ;
+    }
+    &:hover::after{
+      width: 90%;
+    }
+    @media (max-width: 1025px) {
+    font-size: 1.5rem;
+    }
+    @media (max-width: 415px) {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+.discover{
+  &-heading{
+    color: color(Black);
+    font-weight: 700;
+    font-size: 2.8rem;
+    @media (max-width: 1025px) {
+      font-size: 3.5rem;
+    }
+    @media (max-width: 541px) {
+      font-size: 2.2rem;
+    }
+  }
+
+  &-paragraph{
+    color: color(Dark-Gray);
+    margin: 3rem 0;
+    font-size: 1.1rem;
+    @media (max-width: 1025px) {
+      font-size: 2.6rem;
+    }
+    @media (max-width: 768px){
+
+        font-size: 2.2rem;
+    }
+    @media (max-width: 541px) {
+      font-size: 1.8rem;
+    }
+    @media (max-width: 415px) {
+      font-size: 1.3rem;
+    }
+
+  }
+  &-btn{
+    letter-spacing: 1rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all .3s;
+    .arrow{
+      transition: all .3s;
+    }
+    @media (max-width: 1025px) {
+
+      font-size: 2.5rem;
+    }
+    @media (max-width: 541px) {
+      font-size: 1.8rem;
+    }
+    &:hover{
+      color: color(Dark-Gray);
+      .arrow{
+        fill: color(Dark-Gray);
+      }
+    }
+  }
+}
+
+%btns{
+  padding: 1rem 3rem;
+  background-color: color(Black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all .4s;
+  user-select: none;
+  &:hover{
+    background-color: color(Very-Dark-Gray);
+  }
+
+  @media (max-width: 1025px) {
+    padding: 4rem 5rem;
+  }
+  @media (max-width: 541px) {
+    padding: 2rem 3rem;
+  }
+}
+.slider-btn{
+  grid-column: 6 / 8;
+  grid-row: 2/3;
+  display: flex;
+  @media (max-width: 1025px) {
+    grid-column: 1 / -1;
+    grid-row: 1/2;
+    align-self: end;
+    justify-self: end;
+  }
+
+}
+.left-btn{
+  @extend %btns
+
+}
+.right-btn{
+  @extend %btns
+}
+
+
+.about{
+  &-content{
+    flex: 1;
+    padding: 0 5rem;
+    @media (max-width: 1025px) {
+      padding: 7rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    @media (max-width: 415px) {
+      padding: 3rem;
+    }
+    &-heading{
+      color: color(Dark);
+      font-weight: 700;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: .4rem;
+      margin-bottom: 1rem;
+      @media (max-width: 1025px) {
+        font-size: 3rem;
+        margin: 2rem 0;
+      }
+      @media (max-width: 541px) {
+        font-size: 2.3rem;
+      }
+      @media (max-width: 415px) {
+        font-size: 1.8rem;
+      }
+    }
+    &-paragraph{
+      color: color(Dark-Gray);
+      font-size: 1rem;
+      @media (max-width: 1025px) {
+        font-size: 2.3rem;
+      }
+      @media (max-width: 541px) {
+        font-size: 1.5rem;
+      }
+    }
+
+  }
+  &-right-img, &-left-img{
+    flex: 1;
+    align-self: stretch;
+    img{
+      width: 100%;
+    }
+  }
+
+}
+
+.hamburger{
+  position: fixed;
+  top: 2rem;
+  left: 1rem;
+  visibility: hidden;
+  transition: all .3s;
+  width: 4rem;
+  height: 2rem;
+  @media (max-width: 1024px) {
+    visibility: visible;
+    transition: all .5s;
+  }
+}
+.line{
+  &-1{
+    height: 3px;
+    background-color: white;
+    transform-origin: right;
+    transition: all .5s .5s;
+  }
+  &-2{
+    height: 3px;
+    background-color: white;
+    margin: 1rem 0;
+    transition: all .5s .5s;
+  }
+  &-3{
+    height: 3px;
+    background-color: white;
+    transform-origin: right;
+    transition: all .5s .5s;
+  }
+}
+
+.logo-animation{
+  top: -3rem;
+}
+
+.navbar-animation{
+  top: 3rem;
+}
