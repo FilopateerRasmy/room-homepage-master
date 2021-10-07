@@ -63,7 +63,7 @@ sliderBtnRight.addEventListener('click', function (){
  }
     screenSize()
     discover.classList.add('animation');
-  header.style.backgroundImage = `url(${imageArr[imageIndex] || imageMobArr[imageIndex]})`;
+  header.style.backgroundImage = `url(${imageArr[imageIndex]})`;
     discoverHeading.innerText = headingText[imageIndex];
  discoverParagraph.innerText = paragraphText[imageIndex];
 
